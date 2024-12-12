@@ -1,0 +1,118 @@
+/* Full-Page Background Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Calculator Styling */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+
+/* Display Styling */
+.display {
+  width: 100%;
+  background: #1e1e1e;
+  color: #00ffcc;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: right;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.display h2 {
+  margin: 5px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Button Styling */
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #6c63ff, #5848c2);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+              -2px -2px 5px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #5848c2, #6c63ff);
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Special Buttons */
+button.math {
+  background: linear-gradient(145deg, #ff6f61, #d6453c);
+}
+
+button.math:hover {
+  background: linear-gradient(145deg, #d6453c, #ff6f61);
+}
+
+button.Wid {
+  grid-column: span 2;
+}
+
+button.width {
+  grid-column: span 2;
+  background: linear-gradient(145deg, #ffa41b, #ff9100);
+}
+
+button.width:hover {
+  background: linear-gradient(145deg, #ff9100, #ffa41b);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calculator {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .display h2 {
+    font-size: 1.5rem;
+  }
+}
